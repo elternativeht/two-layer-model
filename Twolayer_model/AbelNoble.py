@@ -66,7 +66,7 @@ class Abel_Noble_Gas(object):
         h2_init_value = [8.11977575e-02,2.11509767e+03,1.02122048e-05]
         h2_init_value_new = [8.30938830e-02,2.06612138e+03,1.11813534e-03]
         resultlist = fsolve(Eqs_B87,h2_init_value_new)
-        print(resultlist)
+        #print(resultlist)
         self.rho_B2,self.U_B2,self.A_B2 = resultlist
         self.Birch87_Diameter = (self.A_B2*4/pi)**0.5
         print('''
@@ -126,7 +126,7 @@ class Abel_Noble_Gas(object):
             if cur_p0 != self.p0:
                 _init_value_ = cur_ans
             else:
-                print(cur_ans)
+                #print(cur_ans)
                 self.p2a,self.T2a,self.rho_2a,self.U2a,self.T2b,self.rho_2b,self.U2b = cur_ans
                 self.MachDiskMassFlow = self.rho_2b*self.U2b*self.MachDiskCutArea
                 self.MachDiskMassFlow_T = self.rho_2b*self.U2b*self.MachDiskCutArea_T
